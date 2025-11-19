@@ -1358,3 +1358,88 @@ tbody {
   color: #666;
   line-height: 1.5;
 }
+
+/* ---------------------------------- */
+/* EDUCATION SECTION STYLES (REVISED FOR RESPONSIVENESS) */
+/* ---------------------------------- */
+
+/* 1. The main container for all the cards */
+.education-card-container {
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: space-around; /* Use space-around for balanced gaps */
+    gap: 15px; /* Reduced gap for a tighter fit */
+    padding-top: 10px; /* Add slight top padding */
+}
+
+/* 2. The individual education card */
+.education-card {
+    /* For responsiveness, we calculate the width to ensure 4 cards fit with minimal space */
+    width: 23%; 
+    min-width: 220px; /* Minimum width to keep them readable */
+    
+    border: 1px solid #f1f1f1; /* Using your general border color */
+    border-radius: 4px; /* Using your general border radius */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+/* 3. The image container */
+.education-image-container {
+    width: 100%;
+    height: 120px; /* **Crucially reduced height** for less vertical space */
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+/* 4. The image itself */
+.education-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0; /* Override default p margin */
+}
+
+/* 5. The text content area */
+.education-card-content {
+    padding: 10px; /* Reduced padding */
+}
+
+/* 6. Text styling inside the card */
+.education-card-content h4 {
+    margin-top: 0;
+    margin-bottom: 5px; /* Reduced margin */
+    font-size: 1em; /* Smaller font size */
+    line-height: 1.2;
+    color: #444; /* Using your general header color */
+}
+
+.education-card-content p {
+    font-size: 0.8em; /* Smaller paragraph font */
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 0; /* Remove default p margin */
+}
+
+/* --- Media Query for LAPTOP SCREENS (769px to 1200px) --- */
+/* This targets the range where you likely see the unwanted scroll */
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .education-card {
+        width: 45%; /* Switch to 2 columns on mid-sized laptops */
+        min-width: 0; /* Allow the width to be flexible */
+    }
+    .education-card-container {
+        justify-content: space-between; /* Space them out evenly */
+    }
+}
+#tab-data-wrap {
+    /* Existing styles...*/
+    padding: 30px 20px;
+    /* ... */
+    /* Add this line: */
+    min-height: 60vh; /* Set a minimum height, but allow it to grow */
+    height: auto !important; /* Force auto height override if needed */
+}
