@@ -10298,7 +10298,7 @@ Change widths as necessary
 
 
 
-    padding: 10px 40px 10px 40px;
+    padding: 10px 25px 10px 25px;
 
 
 
@@ -11181,3 +11181,195 @@ dont give me a ready to paste of the whole thing.
 
 
 just give me the block to paste ill add it by myself
+
+/* ------------------------------------------------ */
+
+/* ACHIEVEMENTS SECTION STYLES */
+
+/* ------------------------------------------------ */
+
+.achievements-header {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  gap: 15px;
+
+}
+
+.achievements-header h3 {
+
+  margin: 0;
+
+  font-size: 1.8em;
+
+  color: #2E8B57;
+
+  text-transform: uppercase;
+
+}
+
+.achievement-icon {
+
+  height: 2em;
+
+  width: auto;
+
+  margin: 0;
+
+  vertical-align: middle;
+
+}
+
+.achievements-container {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  padding: 0 10px;
+
+}
+
+.achievement-section {
+
+  background: #f9f9f9;
+
+  border: 1px solid #f1f1f1;
+
+  border-radius: 4px;
+
+  padding: 15px;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s ease;
+
+}
+
+.achievement-section:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+}
+
+.achievement-section h4 {
+
+  color: #2E8B57;
+
+  font-size: 1.3em;
+
+  margin-top: 0;
+
+  margin-bottom: 15px;
+
+  border-bottom: 2px solid #2E8B57;
+
+  padding-bottom: 8px;
+
+}
+
+.achievement-list {
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+
+}
+
+.achievement-list li {
+
+  padding: 8px 0;
+
+  border-bottom: 1px solid #e0e0e0;
+
+  font-size: 0.9em;
+
+  line-height: 1.4;
+
+  color: #555;
+
+}
+
+.achievement-list li:last-child {
+
+  border-bottom: none;
+
+}
+
+.achievement-list li strong {
+
+  color: #333;
+
+  font-weight: 600;
+
+}
+
+/* Responsive Design for Achievements */
+
+@media only screen and (max-width: 1200px) {
+
+  .achievements-container {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .achievements-container {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .achievements-header {
+
+    flex-direction: column;
+
+    gap: 10px;
+
+  }
+
+  .achievements-header h3 {
+
+    font-size: 1.5em;
+
+  }
+
+  .achievement-icon {
+
+    height: 1.5em;
+
+  }
+
+}
+
+/* Disable scrolling in the achievements tab */
+
+#achievements {
+
+  overflow: hidden;
+
+}
+
+#achievements section {
+
+  max-height: none;
+
+  overflow: visible;
+
+}
