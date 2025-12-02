@@ -11778,16 +11778,12 @@ html, body {
 /* MAXIMIZE SCREEN UTILIZATION FOR DESKTOP */
 /* ------------------------------------------------ */
 @media only screen and (min-width: 1024px) {
-  /* Full viewport height layout */
-  html, body {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-  }
-
+  /* Full viewport height layout using flexbox */
   body {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
 
   .main-container {
@@ -11860,12 +11856,12 @@ html, body {
     min-height: 0;
   }
 
-  /* About tab layout optimization */
+  /* About tab - push contact info to bottom */
   #about .contact-info {
     margin-top: auto;
   }
 
-  /* Education cards centered */
+  /* Education cards - center vertically and horizontally */
   .education-card-container {
     display: flex;
     flex-wrap: wrap;
@@ -11875,21 +11871,24 @@ html, body {
     min-height: 0;
   }
 
-  /* Achievements grid fills space */
+  /* Achievements grid - keep existing grid structure */
   .achievements-container {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
     align-content: start;
   }
 
-  /* Family cards centered */
+  /* Family cards - center vertically and horizontally */
   .family-card-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     min-height: 0;
   }
 
-  /* Batchmates layout optimization */
+  /* Batchmates - stretch to fill height */
   .batchmates-container {
     display: flex;
     align-items: stretch;
