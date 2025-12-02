@@ -11771,20 +11771,61 @@ html, body {
     max-width: 300px;
   }
   
+  /* Stack batchmates panels vertically on mobile */
   .batchmates-container {
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 15px;
+    padding: 15px;
   }
   
-  .batchmates-left,
-  .batchmates-right,
+  .batchmates-left {
+    grid-column: 1;
+    grid-row: 1;
+    max-height: 300px;
+  }
+  
   .batchmates-center {
-    max-width: 100%;
-    width: 100%;
+    grid-column: 1;
+    grid-row: 2;
+    min-height: 300px;
+  }
+  
+  .batchmates-right {
+    grid-column: 1;
+    grid-row: 3;
+    max-height: 300px;
+  }
+  
+  .batchmates-description {
+    grid-column: 1;
+    grid-row: 4;
   }
   
   .batchmates-list li {
     font-size: 0.8em;
+  }
+  
+  #batchmates section {
+    background-size: cover;
+    min-height: auto;
+  }
+}
+
+/* Tablet adjustments */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+  .batchmates-container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 1fr auto;
+    gap: 15px;
+    max-width: 100%;
+  }
+  
+  .batchmates-left,
+  .batchmates-right {
+    max-height: 400px;
   }
 }
 
