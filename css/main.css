@@ -11580,7 +11580,7 @@ just give me the block to paste ill add it by myself
   grid-column: 3;
 }
 
-/* Center area - the photo displays here via background-image */
+/* Center area - the photo displays via the section's background-image */
 .batchmates-center {
   grid-column: 2;
   width: 100%;
@@ -11588,9 +11588,6 @@ just give me the block to paste ill add it by myself
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: inherit;
-  background-size: cover;
-  background-position: center;
 }
 
 .batchmates-list {
@@ -11612,8 +11609,6 @@ just give me the block to paste ill add it by myself
 .batchmates-list li:last-child {
   border-bottom: none;
 }
-
-/* Removed .batchmates-description styles - element no longer exists */
 
 /* Ensure batchmates section can expand to content height */
 #batchmates section {
