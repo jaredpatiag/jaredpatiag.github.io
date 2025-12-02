@@ -11775,76 +11775,80 @@ html, body {
 }
 
 /* ------------------------------------------------ */
-/* FULLSCREEN LAYOUT FOR DESKTOP/LAPTOP/MAC */
+/* MAXIMIZE SCREEN UTILIZATION FOR DESKTOP */
 /* ------------------------------------------------ */
-
 @media only screen and (min-width: 1024px) {
-  /* Make the main container fill the viewport */
-  .main-container {
+  /* Full viewport height layout */
+  html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+  }
+
+  .main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
   }
 
   .main.wrapper {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    flex: 1;
     max-width: 100%;
-    width: 100%;
-    padding: 10px 20px 0 20px;
-    height: calc(100vh - 20px);
-    box-sizing: border-box;
+    padding-top: 15px;
+    padding-bottom: 0;
+    min-height: 0;
   }
 
-  /* Tab wrapper fills remaining space */
+  /* Tab wrapper takes remaining space */
   .tab-wrapper {
     flex: 1;
     display: flex;
     flex-direction: row;
-    height: 100%;
     min-height: 0;
   }
 
-  /* Tab container fills available space */
   #tab-container {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    flex: 1;
-    height: 100%;
     min-height: 0;
   }
 
-  /* Tab data wrap fills remaining height after tabs */
+  /* Tab navigation stays at top */
+  .etabs {
+    flex-shrink: 0;
+  }
+
+  /* Tab content fills remaining height */
   #tab-data-wrap {
     flex: 1;
     display: flex;
     flex-direction: column;
-    height: auto;
     min-height: 0;
     padding: 20px 30px;
-    overflow: hidden;
     box-sizing: border-box;
   }
 
-  /* Each tab section fills the container */
+  /* Each tab content area fills available space */
   #about,
   #education,
   #achievements,
   #family,
   #batchmates {
-    flex: 1;
     display: flex;
     flex-direction: column;
     height: 100%;
     min-height: 0;
-    overflow: hidden;
   }
 
-  /* Section inside tabs fills available space */
   #about section,
   #education section,
   #achievements section,
@@ -11853,145 +11857,42 @@ html, body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    height: 100%;
     min-height: 0;
-    overflow: hidden;
   }
 
-  /* About Tab - Adjust layout to fill space */
-  #about .g2 {
-    flex: 0 0 auto;
-  }
-
-  #about .photo {
-    height: 180px;
-    width: 180px;
-  }
-
-  #about .info h2 {
-    font-size: 2.2em;
-    margin-bottom: 0.3em;
-  }
-
-  #about .info p {
-    font-size: 0.95em;
-    line-height: 1.4;
-    margin-bottom: 1em;
-  }
-
+  /* About tab layout optimization */
   #about .contact-info {
     margin-top: auto;
   }
 
-  #about .contact-info .g1 {
-    width: 31%;
-  }
-
-  /* Education Tab - Cards fill the space */
+  /* Education cards centered */
   .education-card-container {
-    flex: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
-    gap: 15px;
-    padding: 10px;
-    height: 100%;
+    min-height: 0;
   }
 
-  .education-item {
-    width: calc(25% - 15px);
-    min-width: 200px;
-    max-width: 280px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .education-image-container {
-    height: 120px;
-  }
-
-  /* Achievements Tab - Fill space */
+  /* Achievements grid fills space */
   .achievements-container {
-    flex: 1;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
     align-content: start;
-    height: 100%;
   }
 
-  .achievement-section {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
-
-  .achievements-header h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-
-  /* Family Tab - Center cards */
+  /* Family cards centered */
   .family-card-container {
-    flex: 1;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    align-content: center;
-    gap: 25px;
-    height: 100%;
+    justify-content: center;
+    min-height: 0;
   }
 
-  .family-item {
-    width: calc(33% - 25px);
-    max-width: 300px;
-  }
-
-  .family-image-container {
-    height: 180px;
-  }
-
-  /* Batchmates Tab - Fill space */
+  /* Batchmates layout optimization */
   .batchmates-container {
-    flex: 1;
     display: flex;
-    justify-content: space-between;
     align-items: stretch;
-    height: 100%;
-    gap: 15px;
-  }
-
-  .batchmates-left,
-  .batchmates-right {
-    flex: 0 0 20%;
-    max-width: 20%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .batchmates-center {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 60%;
-  }
-
-  .batchmates-frame {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .batchmates-image-container {
-    height: auto;
-    max-height: calc(100vh - 250px);
-  }
-
-  .batchmates-list li {
-    padding: 2px 5px;
-    font-size: 0.72em;
+    min-height: 0;
   }
 }
