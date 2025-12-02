@@ -11624,7 +11624,7 @@ just give me the block to paste ill add it by myself
 /* Font size for names - readable but compact */
 .batchmates-list li {
   padding: 8px 10px;
-  font-size: 0.85em;
+  font-size: 0.75em;
   color: #333;
   border-bottom: 1px solid #e0e0e0;
   line-height: 1.4;
@@ -11981,7 +11981,7 @@ html, body {
   }
   
   .batchmates-list li {
-    font-size: 0.9em;
+    font-size: 0.78em;
     padding: 10px 12px;
   }
   
